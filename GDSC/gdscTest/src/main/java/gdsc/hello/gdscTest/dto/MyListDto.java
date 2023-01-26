@@ -7,7 +7,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class AllMatchDto {
+public class MyListDto {
 
     private Long reserveId;
 
@@ -20,7 +20,7 @@ public class AllMatchDto {
     private String explanation;
     private Integer recruitmentNum;
 
-    public AllMatchDto(Reserve reserve) {
+    public MyListDto(Reserve reserve) {
         reserveId = reserve.getId();
         sport = reserve.getSport();
         startT = reserve.getStartT();

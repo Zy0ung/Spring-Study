@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702fb9b2-7527-4057-acf4-9a62d08efbef" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/hello-spring.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring/src/main/java/hello/hellospring/HelloSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/src/main/java/hello/hellospring/HelloSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/domain/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/dto/AddMemberDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/dto/MyListDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/controller/ReserveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/controller/ReserveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/domain/Reserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/domain/Reserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/dto/AllMatchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/dto/AllMatchDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/repository/ReserveRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/repository/ReserveRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/service/ReserveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GDSC/gdscTest/src/main/java/gdsc/hello/gdscTest/service/ReserveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,28 +72,41 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Notification.DisplayName-DoNotAsk-Download Shared Index": "공유된 색인 이용 가능",
-    "Notification.DoNotAsk-Download Shared Index": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/jivel/Desktop/Spring-Study/hello-spring/hello-spring",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Download Shared Index&quot;: &quot;공유된 색인 이용 가능&quot;,
+    &quot;Notification.DoNotAsk-Download Shared Index&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jivel/Desktop/Spring-Study/hello-spring/hello-spring&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="src.main.java.hello.hellospring" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.hello-spring">
+    <configuration name="HelloSpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.hellospring.HelloSpringApplication" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.hellospring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="hello-spring" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -111,6 +129,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.hello-spring" />
+        <item itemvalue="Application.HelloSpringApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -132,6 +151,8 @@
       <workItem from="1671778872137" duration="428000" />
       <workItem from="1671779327431" duration="968000" />
       <workItem from="1671780340090" duration="126000" />
+      <workItem from="1674718917098" duration="398000" />
+      <workItem from="1674719358722" duration="75000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,7 @@ public class ReserveRepository {
         em.persist(reserve);
     }
 
-    //경기 찾기
+    //찾기
     public Reserve findOne(Long id){
         return em.find(Reserve.class,id);
     }
@@ -28,10 +28,17 @@ public class ReserveRepository {
         em.remove(reserve);
     }
 
-    //모든 경기 찾기
+    //모든 경기 보여주기
     public List<Reserve> findAll(){
         return em.createQuery("select r from Reserve r", Reserve.class)
                 .getResultList();
+    }
+
+    // 내가 참여한 경기 보여주기
+    public List<Reserve> createdByMe(Long memberId){
+        return em.createQuery("select r from Reserve r" +
+                        " join fetch r.member m where m.id =: memberId", Reserve.class)
+                .setParameter("memberId",memberId).getResultList();
     }
 
 }

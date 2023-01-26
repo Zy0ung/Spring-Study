@@ -1,13 +1,15 @@
 package gdsc.hello.gdscTest.service;
 
-import gdsc.hello.gdscTest.domain.Reserve;
+import gdsc.hello.gdscTest.domain.Member;
 import gdsc.hello.gdscTest.dto.CreateReserveDto;
 import gdsc.hello.gdscTest.dto.UpdateReserveDto;
+import gdsc.hello.gdscTest.domain.Reserve;
+import gdsc.hello.gdscTest.repository.MemberRepository;
 import gdsc.hello.gdscTest.repository.ReserveRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -16,11 +18,15 @@ public class ReserveService {
 
     private final ReserveRepository reserveRepository;
 
+    private final MemberRepository memberRepository;
+
     //경기 생성
     @Transactional
-    public Long createReserve(CreateReserveDto createReserveDto){
+    public Long createReserve(Long memberId,CreateReserveDto createReserveDto){
 
-        Reserve reserve = Reserve.createReserve(createReserveDto.getTitle(),
+        Member member = memberRepository.findOne(memberId);
+
+        Reserve reserve = Reserve.createReserve(member,createReserveDto.getTitle(),
                 createReserveDto.getExplanation(), createReserveDto.getRecruitmentNum(),
                 createReserveDto.getSport(), createReserveDto.getStartT(),
                 createReserveDto.getEndT());

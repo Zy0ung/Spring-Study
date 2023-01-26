@@ -18,6 +18,10 @@ public class Reserve {
     @Enumerated(EnumType.STRING)
     private Sport sport;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+
     private LocalDateTime startT;
     private LocalDateTime endT;
 
@@ -26,10 +30,18 @@ public class Reserve {
     private Integer recruitmentNum;
 
 
+    //연관관계 메서드//  member가 생성될 때  Member 클래스 안에있는 reserveList에 memeber를 추가하기 위한 메서드
+    public void addMember(Member member){
+        this.member=member;
+        member.getReserveList().add(this);
+    }
+
+
     //==생성 메서드==//
-    public static Reserve createReserve(String title, String explanation,
-                                        Integer recruitmentNum, Sport sport, LocalDateTime endT, LocalDateTime startT){
+    public static Reserve createReserve(Member member,String title, String explanation,
+                                        Integer recruitmentNum, Sport sport, LocalDateTime startT, LocalDateTime endT){
         Reserve reserve = new Reserve();
+        reserve.addMember(member);
         reserve.setTitle(title);
         reserve.setExplanation(explanation);
         reserve.setRecruitmentNum(recruitmentNum);
@@ -38,4 +50,5 @@ public class Reserve {
         reserve.setEndT(endT);
         return reserve;
     }
+
 }

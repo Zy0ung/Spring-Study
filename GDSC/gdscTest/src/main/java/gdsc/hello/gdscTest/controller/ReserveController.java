@@ -1,9 +1,9 @@
 package gdsc.hello.gdscTest.controller;
 
-import gdsc.hello.gdscTest.domain.Reserve;
 import gdsc.hello.gdscTest.dto.AllMatchDto;
 import gdsc.hello.gdscTest.dto.CreateReserveDto;
 import gdsc.hello.gdscTest.dto.UpdateReserveDto;
+import gdsc.hello.gdscTest.domain.Reserve;
 import gdsc.hello.gdscTest.response.SuccessResponse;
 import gdsc.hello.gdscTest.service.ReserveService;
 import lombok.RequiredArgsConstructor;
@@ -22,10 +22,10 @@ public class ReserveController {
     private final ReserveService reserveService;
 
     //경기 생성하기
-    @PostMapping("/create-match")
-    public ResponseEntity createMatch(@RequestBody CreateReserveDto createReserveDto){
+    @PostMapping("/create-match/{memberId}")
+    public ResponseEntity createMatch(@PathVariable Long memberId,@RequestBody CreateReserveDto createReserveDto){
 
-        Long reserveId = reserveService.createReserve(createReserveDto);
+        Long reserveId = reserveService.createReserve(memberId,createReserveDto);
 
         return ResponseEntity.status(HttpStatus.OK).body(new SuccessResponse(200,reserveId));
     }
